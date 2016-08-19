@@ -1,5 +1,7 @@
 # Angular Review Topics
 
+## MVC with and without Angular (on board)
+
 ## scope in Angular
 
 ### Quick Facts about `scope`:
@@ -30,6 +32,12 @@ and then ```{{popcorn.name}}``` will show up as ```Caramel``` in our page
     $scope.name = "Caramel"
         
 and then ```{{name}}``` will show up as ```Caramel``` in our page
+
+## Angular and OAuth
+
+## $http and its connection to back-end (on board)
+
+## The back-end with Node, Express, and Mongo (JP)
 
 ## File structure with MEANish apps
 
@@ -166,6 +174,10 @@ And turn it into this:
     console.log("App listening on port " + port);
 ```
 
+## Server- vs Client-side Rendering (discussion)
+
 Further Resources: 
 - [scope Documentation](https://docs.angularjs.org/guide/scope)
 - [rootScope Documentation](https://docs.angularjs.org/api/ng/type/$rootScope.Scope)
+- [AngularJS in a Nutshell](https://blog.informatech.cr/2014/04/15/jsapps-101-angular-js/)
+- [Client-side vs server-side rendering](http://techbeacon.com/understanding-front-end-vs-back-end-performance-metrics-mobile-apps)
