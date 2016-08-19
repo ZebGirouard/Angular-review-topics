@@ -1,6 +1,6 @@
 # Angular Review Topics
 
-## MVC with and without Angular (on board)
+## MVC vs Angular model (on board)
 
 ## scope in Angular
 
