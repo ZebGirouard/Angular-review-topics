@@ -39,7 +39,7 @@ and then ```{{name}}``` will show up as ```Caramel``` in our page
 
 ## The back-end with Node, Express, and Mongo (JP)
 
-![]("Angular vs Express App Structure.png")
+![](Angular vs Express App Structure.png)
 
 ## File structure with MEANish apps
 
