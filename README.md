@@ -41,6 +41,21 @@ and then ```{{name}}``` will show up as ```Caramel``` in our page
 
 ![](Angular vs Express App Structure.png)
 
+## Some helpful conventions
+
+* Start your Express routes with ``api``. For example, ``api/cards`` and ``api/criminals``.
+* Remember that order matters for Express routing. If you include ``app.use(express.static('public'));``
+above a controller action then any file that matches the route in your public file will be served before 
+your controller action.
+* Turn off HTML 5 routing in Angular. Don't include 
+```js
+    $locationProvider.html5Mode({
+      enabled: true,
+      requireBase: false
+    });
+```
+Your Angular routes will look like ``/#/cards`` or ``/#/criminals``. Using the default routing helps you move faster during prototyping. Its not too hard to set up express to use the HTML5 routing, here's a (blog post)[http://www.seankenny.me/blog/2013/08/05/angularjs-in-html5-mode-with-expressjs/] outlining the changes you need for HTML5 routing. 
+
 ## File structure with MEANish apps
 
 A reasonable strategy when building a full-stack JS app from scratch is to start with everything in the `server.js` or `app.js` file that serves up your file, and then slowly split out your code into separate files based on their functionality.
