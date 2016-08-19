@@ -47,14 +47,14 @@ and then ```{{name}}``` will show up as ```Caramel``` in our page
 * Remember that order matters for Express routing. If you include ``app.use(express.static('public'));``
 above a controller action then any file that matches the route in your public file will be served before 
 your controller action.
-* Turn off HTML 5 routing in Angular. Don't include 
+* Turn off HTML 5 routing in Angular. **DON'T** include 
 ```js
     $locationProvider.html5Mode({
       enabled: true,
       requireBase: false
     });
 ```
-Your Angular routes will look like ``/#/cards`` or ``/#/criminals``. Using the default routing helps you move faster during prototyping. Its not too hard to set up express to use the HTML5 routing, here's a (blog post)[http://www.seankenny.me/blog/2013/08/05/angularjs-in-html5-mode-with-expressjs/] outlining the changes you need for HTML5 routing. 
+Your Angular routes will look like ``/#/cards`` or ``/#/criminals``. Using the default routing helps you move faster during prototyping. Its not too hard to set up express to use the HTML5 routing, here's a [blog post](http://www.seankenny.me/blog/2013/08/05/angularjs-in-html5-mode-with-expressjs/) outlining the changes you need for HTML5 routing. 
 
 ## File structure with MEANish apps
 
