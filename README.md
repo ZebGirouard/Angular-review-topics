@@ -39,6 +39,8 @@ and then ```{{name}}``` will show up as ```Caramel``` in our page
 
 ## The back-end with Node, Express, and Mongo (JP)
 
+![]("Angular vs Express App Structure.png")
+
 ## File structure with MEANish apps
 
 A reasonable strategy when building a full-stack JS app from scratch is to start with everything in the `server.js` or `app.js` file that serves up your file, and then slowly split out your code into separate files based on their functionality.
