@@ -2,11 +2,27 @@
 
 ## scope in Angular
 
-Quick Facts about `scope`:
+### Quick Facts about `scope`:
 
-Scope is the glue between application controller and the view.
+- Scope is an object that refers to the application model.
+- Scope is the glue between application controller and the view.
+- Both controllers and directives have reference to the scope, but not to each other.
+- Everything that is added to the $scope variable during controller initialization will be accessible to the view; better said: it represents what the view can see.
+- Each Angular application has exactly one root scope, but may have several child scopes.
+- Child scopes are created using the $new() method.
+    - And what do we know that uses the $new() method?
+- Scopes provide APIs ($watch) to observe model mutations.
+- Scopes provide APIs ($apply) to propagate any model changes through the system into the view from *outside* of the "Angular realm".
+    - This is given to you already on things *inside* the "Angular realm" (controllers, services, Angular event handlers).
 
-Both controllers and directives have reference to the scope, but not to each other.
+### The difference between `self`/`this` and $scope.
+    - Controllers are constructors, so you can make variables available by putting them in `this`, and then accessing that object with 
+        - `ng-controller="MyPopcornController as popcorn` (in HTML)
+        - `this.name = "Caramel"`
+    and then `{{popcorn.name}}` will show up as `Caramel` in our page
+    - `$scope` makes variables immediately available to the view so we can access them with
+        - `$scope.name = "Caramel"`
+    and then `{{name}}` will show up as `Caramel` in our page
 
 ## File structure with MEANish apps
 
@@ -145,3 +161,4 @@ And turn it into this:
 
 Further Resources: 
 [scope Documentation](https://docs.angularjs.org/guide/scope)
+[rootScope Documentation](https://docs.angularjs.org/api/ng/type/$rootScope.Scope)
