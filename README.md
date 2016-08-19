@@ -15,14 +15,21 @@
 - Scopes provide APIs ($apply) to propagate any model changes through the system into the view from *outside* of the "Angular realm".
     - This is given to you already on things *inside* the "Angular realm" (controllers, services, Angular event handlers).
 
-### The difference between `self`/`this` and $scope.
-    - Controllers are constructors, so you can make variables available by putting them in `this`, and then accessing that object with 
-        - `ng-controller="MyPopcornController as popcorn` (in HTML)
-        - `this.name = "Caramel"`
-    and then `{{popcorn.name}}` will show up as `Caramel` in our page
-    - `$scope` makes variables immediately available to the view so we can access them with
-        - `$scope.name = "Caramel"`
-    and then `{{name}}` will show up as `Caramel` in our page
+### The difference between `self` / `this` and $scope.
+    
+Controllers are constructors, so you can make variables available by putting them in `this`, and then accessing that object with 
+    
+    ng-controller="MyPopcornController as popcorn (in HTML)
+        
+    this.name = "Caramel" (in JS)
+        
+and then ```{{popcorn.name}}``` will show up as ```Caramel``` in our page
+    
+```$scope``` makes variables immediately available to the view so we can access them with
+    
+    $scope.name = "Caramel"
+        
+and then ```{{name}}``` will show up as ```Caramel``` in our page
 
 ## File structure with MEANish apps
 
@@ -160,5 +167,5 @@ And turn it into this:
 ```
 
 Further Resources: 
-[scope Documentation](https://docs.angularjs.org/guide/scope)
-[rootScope Documentation](https://docs.angularjs.org/api/ng/type/$rootScope.Scope)
+- [scope Documentation](https://docs.angularjs.org/guide/scope)
+- [rootScope Documentation](https://docs.angularjs.org/api/ng/type/$rootScope.Scope)
